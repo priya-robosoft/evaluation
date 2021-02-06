@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+  font-family: Inter;
+}
+#root {
+  padding-top: 90px;
+}
+
+h2, h2.text-center {
+  font-size:1.6rem;
+  text-align: left !important;
+  position: relative;
+}
+
+h2:before {
+  content:'';
+  position: absolute;
+  width:30px;
+  height:1px;
+  background-color: #5305FF;
+  bottom: 0px;
+  left:0;
+}
+
+.circle-dark {
+  margin-top: 7px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+}
+.circle-light {
+  margin-top: 7px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(219, 219, 219);
+}
+
+.mainBg-light {
+  background-color: #fff !important;
+}
+
+.mainBg-dark {
+  background-color: rgb(209, 209, 209) !important;
+}
+
+.icon-button {
+  cursor: pointer;
+}
+
+.urlImage {
+  max-width: 200px;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navigation, .bookmarks .navbar {
+  margin:0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  position: fixed;
+  width:100%;
+  z-index:10;
+  top:0;
+  left:0;
+  right:0;
+}
+
+.navigation .navbar {
+  width:57%;
+}
+
+.navigation .navbar .nav-link.active, .bookmarks .navbar .nav-link.active {
+  color: #5305FF;
+  font-weight: 700;
+}
+
+.navigation .heroContainer {
+  width: 43%;
+}
+
+.card {
+  flex-direction: row;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color:#777;
+}
+
+.card-body a {
+  color:#000;
+  display: inline-block;
+  width:80%;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  color: #5305FF;
+}
+
+.card-body .mark {
+  position: absolute;
+  right: 44px;
+  top: 10px;
+  z-index: 0;
+  background-color: transparent;
+}
+
+.card-body .mark svg {
+  position: absolute;
+}
+
+.loadmore {
+  background-color: #5305FF;
+  border:none;
+}
+
+.card-body .mark:before {
+  content: '';
+  position: absolute;
+  width:50px;
+  height: 50px;
+  background-color:#F3F3F3;
+  border-radius: 50%;
+  left:-9px;
+  right:0;
+  top:0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 815px) {
+  #root {
+    padding-top: 150px;
+  }
+
+  .navigation .heroContainer {
+    width: 100%;
+  }
+  .navigation .navbar {
+    width:100%;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .urlImage {
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-body a {
+    width:100%;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-body .mark:before {
+    width:44px;
+    height:44px;
+    left:-8px;
+  }
+}
